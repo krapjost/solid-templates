@@ -10,10 +10,19 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@julr/unocss-preset-forms": "^0.0.2",
+    "@julr/unocss-preset-heropatterns": "^0.0.2",
+    "@unocss/reset": "^0.47.3",
+    "@unocss/vite": "^0.47.3",
+    "unocss": "^0.46.5",
+    "unocss-preset-primitives": "^0.0.1-beta.3",
     "vite": "^3.0.9",
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "@motionone/solid": "^10.14.3",
+    "@solid-primitives/keyed": "^1.1.4",
+    "@solidjs/router": "^0.5.1",
     "solid-js": "^1.5.1"
   }
 }

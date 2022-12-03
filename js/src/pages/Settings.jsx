@@ -1,5 +1,4 @@
 import { useParams, createResource, A } from '@solidjs/router';
-import type { Component } from 'solid-js'
 
 const fetchUser = () => {
     return {
@@ -9,7 +8,7 @@ const fetchUser = () => {
     }
 }
 
-const User: Component = () => {
+const User = () => {
     const params = useParams();
     const [userData] = createResource(() => params.id, fetchUser);
 

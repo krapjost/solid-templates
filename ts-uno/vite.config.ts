@@ -1,12 +1,30 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
-import UnocssPlugin from '@unocss/vite';
+import UnoCSS from 'unocss/vite'
+import {presetUno, presetWebFonts, presetIcons, presetAttributify, presetTypography, presetTagify} from 'unocss';
 
 export default defineConfig({
   plugins: [
     solidPlugin(),
-    UnocssPlugin({
-      // your config or in uno.config.ts
+    UnoCSS({
+      shortcuts: [
+      ],
+      presets: [
+        presetAttributify(),
+        presetTypography(),
+        presetWebFonts({
+          provider: 'google', // default provider
+          fonts: {
+          sans: 'Roboto',
+          mono: ['Fira Code', 'Fira Mono:400,700'],
+          }
+        }),
+        presetTagify(),
+        presetIcons({
+          cdn: 'https://esm.sh/'
+        }),
+        presetUno(),
+      ]
     }),
   ],
   server: {
